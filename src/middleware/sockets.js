@@ -64,7 +64,7 @@ function setupSocketHandler(feathersParams, provider, emit, app, options) {
         return callback(new Error('There was an error logging out'));
       }
 
-      callback();
+      if(typeof callback === 'function') callback();
     });
   };
 }
