@@ -5,6 +5,7 @@
 
 **Fixed bugs:**
 
+- logout undefined callback
 - restrictToOwner should not throw an error on mass deletions [\#175](https://github.com/feathersjs/feathers-authentication/issues/175)
 
 **Closed issues:**
