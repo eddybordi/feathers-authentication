@@ -59,9 +59,10 @@ function setupSocketHandler(feathersParams, provider, emit, app, options) {
       try {
         delete feathersParams(socket).token;
         delete feathersParams(socket).user;
+        socket[emit]('logout');
       } catch(error) {
         debug('There was an error logging out', error);
-        return callback(new Error('There was an error logging out'));
+        // return callback(new Error('There was an error logging out'));
       }
 
       if(typeof callback === 'function') callback();
